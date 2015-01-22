@@ -1,0 +1,31 @@
+var myApp = angular.module('evg31337', ['ngRoute'])
+  myApp.config(['$locationProvider','$routeProvider', function($locationProvider,$routeProvider) {
+    $locationProvider.html5Mode(true);
+
+$routeProvider
+  .when('/', {
+    templateUrl: 'partials/home.html',
+  })
+  .when('hardware', {
+    templateUrl: 'partials/project_list.html',
+  })
+  .when('/software', {
+    templateUrl: 'partials/project_list.html',
+  })
+  .when('/interests', {
+    templateUrl: 'partials/interests.html',
+  })
+  .when('/about', {
+    templateUrl: 'partials/about.html',
+  })
+  .when('/contact', {
+    templateUrl: 'partials/contact.html',
+  })
+  .when('/misc', {
+    templateUrl: 'partials/misc.html',
+  })
+  .otherwise({
+    redirectTo: '/'
+  });
+
+  }]);
