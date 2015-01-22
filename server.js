@@ -12,19 +12,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-app.get('/', function(req, res){
-  res.render('index.html');
-});
 
-//app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public"));
 //app.use('/js', express.static(__dirname + '/js'));
 //app.use('/css', express.static(__dirname + '/css'));
 //app.use('/partials', express.static(__dirname + '/public/partials'));
-
-//app.all('/*', function(req, res, next) {
-  //  // Just send the index.html for other files to support HTML5Mode
- //   res.sendfile('index.html', { root: __dirname });
-//});
 
 
 app.listen(app.get('port'), function() {
