@@ -7,9 +7,9 @@ myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
    //$urlRouterProvider.otherwise('/hardware');
   //}
   // For any unmatched url, redirect to /state1
-  //$urlRouterProvider.when('', '/');
+  $urlRouterProvider.when('', '/');
   //$urlRouterProvider.otherwise("/views/404");
- // $urlRouterProvider.otherwise('404');
+ $urlRouterProvider.otherwise('404');
   //
   // Now set up the states
   $stateProvider
