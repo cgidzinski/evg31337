@@ -23,7 +23,8 @@ myApp.config(function($stateProvider, $urlRouterProvider, $locationProvider, $ur
         })
         .state('interests', {
             url: "/interests",
-            templateUrl: "views/interests.html"
+            templateUrl: "views/interests.html",
+            controller: "InterestController"
         })
         .state('about', {
             url: "/about",

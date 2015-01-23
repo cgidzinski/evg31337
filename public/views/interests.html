@@ -1,105 +1,31 @@
 <meta charset="utf-8"/>
 <div class="container">
-
     <div class="row">
-
         <div class="col-lg-12">
             <h1 class="page-header">Interests
                 <small>Supposibly I enjoy this trash...</small>
             </h1>
         </div>
     </div>
-
     <div class="row">
-
         <div class="col-lg-12">
-
             <div class="panel-group" id="accordion">
-
-                
-               <div class="panel panel-default">
+               <div class="panel panel-default" ng-repeat="item in interests">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-                               href="interests/#collapseOne">
-                                Electronics
+                               href="interests/#{{item.name}}">
+                                 {{item.name}}
                             </a>
                         </h4>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse">
+                    <div id="{{item.name}}" class="panel-collapse collapse">
                         <div class="panel-body">
-                           I like to build and take apart stuff
+                            {{item.description}}
                         </div>
                     </div>
                 </div>
-                              <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-                               href="interests/#collapseTwo">
-                                Computer Programming
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse">
-                        <div class="panel-body">
-                           Making programs is my forte
-                        </div>
-                    </div>
-                </div>
-            
-              <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-                               href="interests/#collapseThree">
-                                Airsoft
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse">
-                        <div class="panel-body">
-                           pew pew
-                        </div>
-                    </div>
-                </div>
-
-
-              <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-                               href="interests/#collapseFour">
-                                Warhammer
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseFour" class="panel-collapse collapse">
-                        <div class="panel-body">
-                           FOR THE EMPEROR
-                        </div>
-                    </div>
-                </div>
-              <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-                               href="interests/#collapseFive">
-                                Magic
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseFive" class="panel-collapse collapse">
-                        <div class="panel-body">
-                           Swamps 4 Lyfe
-                        </div>
-                    </div>
-                </div>
-
             </div>
-
         </div>
-
     </div>
-
 </div>
