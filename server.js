@@ -18,6 +18,11 @@ app.use(express.static(__dirname + "/public"));
 //app.use('/css', express.static(__dirname + '/css'));
 //app.use('/partials', express.static(__dirname + '/public/partials'));
 
+app.all('/*', function(req, res, next) {
+    // Just send the index.html for other files to support HTML5Mode
+    res.sendfile('index.html', { root: __dirname });
+});
+
 
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
