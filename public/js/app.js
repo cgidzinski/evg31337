@@ -15,12 +15,21 @@ myApp.config(function($stateProvider, $urlRouterProvider, $locationProvider, $ur
         })
         .state('hardware', {
             url: "/hardware",
-            templateUrl: "views/project_list.html"
+            templateUrl: "views/project_list.html",
+            controller: "HardwareController"
         })
         .state('software', {
             url: "/software",
-            templateUrl: "views/project_list.html"
+            templateUrl: "views/project_list.html",
+            controller: "SoftwareController"
         })
+
+        .state('project', {
+            url: '/project/:id',
+            templateUrl: 'views/project_item.html',
+            controller: "Project_Item"
+        })
+
         .state('interests', {
             url: "/interests",
             templateUrl: "views/interests.html",
