@@ -19,7 +19,7 @@ app.use(express.static(__dirname + "/public"));
 //app.use('/partials', express.static(__dirname + '/public/partials'));
 
 app.use(function(req, res) {
-    res.sendfile(__dirname + '/public/index.html');
+    res.sendfile(__dirname + '/index.html');
 });
 
 
