@@ -43,9 +43,9 @@ myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
       url: "/404",
       templateUrl: 'views/404.html'
     });
+});  
 
-
-  $urlRouterProvider.rule(function($injector, $location) {
+$urlRouterProvider.rule(function($injector, $location) {
 
     var path = $location.path();
     var hasTrailingSlash = path[path.length-1] === '/';
@@ -59,4 +59,3 @@ myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
 
   });
    
-});
