@@ -13,12 +13,12 @@
     <div class="row">
 
         <div class="col-md-6">
-            <img class="img-responsive" src="http://placehold.it/750x450">
+            <img class="img-responsive" src="{{image}}">
         </div>
         <div class="col-md-6">
-            <h2>Colinious Maximus the first</h2>
+            <h2>{{descriptionTitle}}</h2>
 
-            <p>Hi</p>
+            <p>{{description}}</p>
 
     
         </div>
@@ -33,32 +33,16 @@
             <h2 class="page-header">Me Amigos</h2>
         </div>
 
-        <div class="col-sm-4">
-            <img class="img-responsive" src="http://placehold.it/750x450">
 
-            <h3>DenoSaauur
-                <small>Lyninx inc.</small>
-            </h3>
-            <p>Herp derp</p>
-            <p><a href="" class="btn btn-primary" role="button">Website</a></p>
-        </div>
-                <div class="col-sm-4">
-            <img class="img-responsive" src="http://placehold.it/750x450">
 
-            <h3>Toomsa
-                <small>BadApps inc.</small>
-            </h3>
-            <p>Hey Baus</p>
-            <p><a href="" class="btn btn-primary" role="button">Website</a></p>
-        </div>
-                <div class="col-sm-4">
-            <img class="img-responsive" src="http://placehold.it/750x450">
+                <div class="col-sm-4" ng-repeat="item in friends">
+            <img class="img-responsive" src="{{item.image}}">
 
-            <h3>noobody
-                <small>somtin inc.</small>
+            <h3>{{item.name}}
+                <small>{{item.company}}</small>
             </h3>
-            <p>moontindewww</p>
-            <p><a href="" class="btn btn-primary" role="button">Website</a></p>
+            <p>{{item.description}}</p>
+            <p><a href="{{item.website}}" class="btn btn-primary" role="button">Website</a></p>
         </div>
 
        
