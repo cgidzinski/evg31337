@@ -4,7 +4,6 @@ myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
   //
   //if(window.history && window.history.pushState){
    //$locationProvider.html5Mode(true)
-   //$urlRouterProvider.otherwise('/hardware');
   //}
   // For any unmatched url, redirect to /state1
   $urlRouterProvider.when('', '/');
