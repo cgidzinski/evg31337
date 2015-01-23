@@ -1,4 +1,5 @@
 myApp.controller('InterestController', function($scope) {
+  $scope.titleSubtext="Supposibly I enjoy this trash..."
   $scope.interests = [
   				   {"name":"Electronics", "description":"I like to build and take apart stuff."},
                    {"name":"Programming", "description":"I enjoy the programming"},
