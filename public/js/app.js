@@ -16,13 +16,13 @@ $urlMatcherFactoryProvider.strictMode(false)
   $stateProvider
     .state('home', {
       url: "/",
-      templateUrl: "views/home.html"
+      templateUrl: "views/home.html/"
     })
     .state('hardware', {
-      url: "/hardware",
+      url: "/hardware/",
       templateUrl: "views/project_list.html"
     })
-    .state('software', {
+    .state('software/', {
       url: "/software",
       templateUrl: "views/project_list.html"
     })
