@@ -16,7 +16,7 @@ myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider,$urlM
       url: "/",
       templateUrl: "/views/home.html"
     })
-    .state('hardware', {
+    .state('hardware/', {
       url: "/hardware/",
       templateUrl: "views/project_list.html"
     })
