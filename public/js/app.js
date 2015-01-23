@@ -46,4 +46,10 @@ myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
       url: "/404",
       templateUrl: 'views/404.html'
     });
+
+
+   
+});
+app.use(function(req, res) {
+    res.sendfile(__dirname + '/index.html');
 });
