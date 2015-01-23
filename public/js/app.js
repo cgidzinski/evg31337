@@ -3,11 +3,9 @@ var myApp = angular.module('evg31337', ['ui.router']);
 myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
   //
   //if(window.history && window.history.pushState){
-   //$locationProvider.html5Mode(true)
+   $locationProvider.html5Mode(true)
   //}
-  // For any unmatched url, redirect to /state1
   $urlRouterProvider.when('', '/');
-  //$urlRouterProvider.otherwise("/views/404");
  $urlRouterProvider.otherwise('404');
   //
   // Now set up the states
