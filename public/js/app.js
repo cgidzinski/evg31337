@@ -5,9 +5,20 @@ myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
   //if(window.history && window.history.pushState){
    $locationProvider.html5Mode(true)
   //}
- 
-$urlMatcherFactoryProvider.strictMode(false)
+ $urlRouterProvider.rule(function ($injector, $location) {
+    var path = $location.url();
 
+    // check to see if the path already has a slash where it should be
+    if (path[path.length - 1] === '/' || path.indexOf('/?') > -1) {
+        return;
+    }
+
+    if (path.indexOf('?') > -1) {
+        return path.replace('?', '/?');
+    }
+
+    return path + '/';
+});
 
  // $urlRouterProvider.when('', '/');
  $urlRouterProvider.otherwise('404');
@@ -16,19 +27,19 @@ $urlMatcherFactoryProvider.strictMode(false)
   $stateProvider
     .state('home', {
       url: "/",
-      templateUrl: "views/home.html/"
+      templateUrl: "views/home.html"
     })
-    .state('hardware', {
-      url: "/hardware/",
+    .state('hardware/', {
+      url: "/hardware",
       templateUrl: "views/project_list.html"
     })
-    .state('software/', {
-      url: "/software",
+    .state('software', {
+      url: "/software/",
       templateUrl: "views/project_list.html"
     })
  .state('interests', {
       url: "/interests",
-      templateUrl: "views/interests.html"
+      templateUrl: "views/interests.html/"
     })  
     .state('about', {
       url: "/about",
