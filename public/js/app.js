@@ -31,11 +31,11 @@ myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
     })
     .state('hardware', {
       url: "/hardware/",
-      templateUrl: "views/project_list.html"
+      templateUrl: "/views/project_list.html"
     })
     .state('software', {
-      url: "/software",
-      templateUrl: "views/project_list.html"
+      url: "/software/",
+      templateUrl: "/views/project_list.html"
     })
  .state('interests', {
       url: "/interests/",
