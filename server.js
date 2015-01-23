@@ -19,9 +19,10 @@ app.use('/*', function(req, res){
   res.sendFile(__dirname + '/public/index.html');
 });
 
-app.use('*/', function(req, res){
-  res.sendFile(__dirname + '/public/index.html');
+app.config(function($resourceProvider) {
+  $resourceProvider.defaults.stripTrailingSlashes = true;
 });
+
 
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
