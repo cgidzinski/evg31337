@@ -27,7 +27,7 @@ myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
   $stateProvider
     .state('home', {
       url: "/",
-      templateUrl: "views/home.html"
+      templateUrl: "/views/home.html"
     })
     .state('hardware', {
       url: "/hardware/",
@@ -39,24 +39,24 @@ myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
     })
  .state('interests', {
       url: "/interests/",
-      templateUrl: "views/interests.html"
+      templateUrl: "/views/interests.html"
     })  
     .state('about', {
       url: "/about/",
-      templateUrl: "views/about.html",
+      templateUrl: "/views/about.html",
     })
     .state('contact', {
       url: "/contact/",
-      templateUrl: "views/contact.html"
+      templateUrl: "/views/contact.html"
     })
     .state('misc', {
       url: "/misc/",
-      templateUrl: "views/misc.html",
+      templateUrl: "/views/misc.html",
       controller: "BlogCtrl"
     })
    .state('404', {
       url: "/404/",
-      templateUrl: 'views/404.html'
+      templateUrl: '/views/404.html'
     });
 });  
 
