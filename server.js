@@ -19,9 +19,9 @@ app.use('/*', function(req, res){
   res.sendFile(__dirname + '/public/index.html');
 });
 
-app.config(function($resourceProvider) {
-  $resourceProvider.defaults.stripTrailingSlashes = true;
-});
+//app.config(function($resourceProvider) {
+ // $resourceProvider.defaults.stripTrailingSlashes = true;
+//});
 
 
 app.listen(app.get('port'), function() {
