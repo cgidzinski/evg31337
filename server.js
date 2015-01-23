@@ -19,6 +19,10 @@ app.use('/*', function(req, res){
   res.sendFile(__dirname + '/public/index.html');
 });
 
+app.use('*/', function(req, res){
+  res.sendFile(__dirname + '/public/index.html');
+});
+
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
 });
