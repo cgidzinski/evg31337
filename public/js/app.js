@@ -2,9 +2,8 @@ var myApp = angular.module('evg31337', ['ui.router']);
 
 myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider,$urlMatcherFactoryProvider) {
   //
-  //if(window.history && window.history.pushState){
-  // $locationProvider.html5Mode(true)
-  //}
+ $locationProvider.html5Mode(true)
+
  $urlMatcherFactoryProvider.strictMode(false)
  // $urlRouterProvider.when('', '/');
  $urlRouterProvider.otherwise('404');
