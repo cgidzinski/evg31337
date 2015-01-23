@@ -34,7 +34,7 @@ myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
       templateUrl: "views/project_list.html"
     })
     .state('software', {
-      url: "/software/",
+      url: "/software",
       templateUrl: "views/project_list.html"
     })
  .state('interests', {
