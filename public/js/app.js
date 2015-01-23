@@ -3,7 +3,7 @@ var myApp = angular.module('evg31337', ['ui.router']);
 myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
   //
   //if(window.history && window.history.pushState){
-   $locationProvider.html5Mode(true)
+   //$locationProvider.html5Mode(true)
    //$urlRouterProvider.otherwise('/hardware');
   //}
   // For any unmatched url, redirect to /state1
@@ -46,10 +46,4 @@ myApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
       url: "/404",
       templateUrl: 'views/404.html'
     });
-
-
-   
-});
-app.use(function(req, res) {
-    res.sendfile(__dirname + '/index.html');
 });
