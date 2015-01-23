@@ -28,14 +28,54 @@ var projectSchema = new mongoose.Schema({
       url: String
   }]
 });
+var softwareSchema = new mongoose.Schema({
+  _id: Number,
+  name: String,
+  date: Date,
+  description: String,
+  image: String,
+});
+
+var hardwareSchema = new mongoose.Schema({
+  _id: Number,
+  name: String,
+  date: Date,
+  description: String,
+  image: String,
+});
+
+
+var interestSchema = new mongoose.Schema({
+  _id: Number,
+  titleSubtext: String,
+   interests: [{
+      name: String,
+      description: String
+  }]
+});
+
+var aboutSchema = new mongoose.Schema({
+  _id: Number,
+  descriptionTitle: String,
+  image: String,
+  description: String,
+   friends: [{
+      name: String,
+      company: String,
+      description: String,
+      website: String,
+      image: String
+  }]
+});
+
 var Project = mongoose.model('Project', projectSchema);
+var Software = mongoose.model('Software', softwareSchema);
+var Hardware = mongoose.model('Hardware', hardwareSchema);
+
+var Interest = mongoose.model('Interest', interestSchema);
+var About = mongoose.model('About', aboutSchema);
 
 mongoose.connect('localhost');
-
-
-
-
-
 
 
 
