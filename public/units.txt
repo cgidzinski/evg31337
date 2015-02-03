@@ -1,0 +1,30 @@
+{
+  "units": {
+    "unit": [
+      {
+        "id": "0",
+        "name": "Warriors",
+        "race": "Necron",
+        "img": "http://images.wikia.com/warhammer40k/images/4/48/NecronSigil.png"
+      },
+      {
+        "id": "1",
+        "name": "Immortals",
+        "race": "Necron",
+        "img": "http://images.wikia.com/warhammer40k/images/4/48/NecronSigil.png"
+      },
+      {
+        "id": "2",
+        "name": "Lord",
+        "race": "Necron",
+        "img": "http://images.wikia.com/warhammer40k/images/4/48/NecronSigil.png"
+      },
+      {
+        "id": "3",
+        "name": "Overlord",
+        "race": "Necron",
+        "img": "http://images.wikia.com/warhammer40k/images/4/48/NecronSigil.png"
+      }
+    ]
+  }
+}
