@@ -6,9 +6,17 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 var app = express();
-var cors = require('cors')
 
-app.use(cors())
+
+var cors = require('express-cors')
+ 
+app.use(cors({
+    allowedOrigins: [
+        'github.com', 'evg31337.com'
+    ]
+}))
+
+
 app.set('port', process.env.PORT || 3000);
 app.use(logger('dev'));
 app.use(bodyParser.json());
