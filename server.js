@@ -7,15 +7,15 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 var app = express();
 
+var cors = require('permissive-cors');
+app.use(cors());
 
-var cors = require('express-cors')
- 
-app.use(cors({
-    allowedOrigins: [
-        'github.com', 'evg31337.com'
-    ]
-}))
-
+app.put('/', function (req, res) {
+  //...
+});
+app.delete('/', function (req, res) {
+  //...
+});
 
 app.set('port', process.env.PORT || 3000);
 app.use(logger('dev'));
