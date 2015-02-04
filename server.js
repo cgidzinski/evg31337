@@ -10,12 +10,7 @@ var app = express();
 var cors = require('permissive-cors');
 app.use(cors());
 
-app.put('/', function (req, res) {
-  //...
-});
-app.delete('/', function (req, res) {
-  //...
-});
+
 
 app.set('port', process.env.PORT || 3000);
 app.use(logger('dev'));
