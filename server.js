@@ -1,3 +1,10 @@
+var allowCrossDomain = function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+}
+
+
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
@@ -6,7 +13,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 var app = express();
-
+  app.use(allowCrossDomain);
 
 
 app.set('port', process.env.PORT || 3000);
@@ -80,25 +87,6 @@ var About = mongoose.model('About', aboutSchema);
 mongoose.connect('localhost');
 
 
-
-var enableCORS = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With, *');
-
-        // intercept OPTIONS method
-    if ('OPTIONS' == req.method) {
-        res.send(200);
-    } else {
-        next();
-    };
-};
-
-app.configure(function() {
-    // enable CORS!
-    app.use(enableCORS);
-
-});
 
 
 
