@@ -84,13 +84,14 @@ var Hardware = mongoose.model('Hardware', hardwareSchema);
 var Interest = mongoose.model('Interest', interestSchema);
 var About = mongoose.model('About', aboutSchema);
 
-mongoose.connect('localhost');
+//mongoose.connect('localhost');
 
 
 
 
 
 app.set('views', __dirname + '/');
+app.set('files', __dirname + '/');
 app.use(express.static(__dirname + "/public"));
 app.use('/*', function(req, res){
   res.sendFile(__dirname + '/public/index.html');

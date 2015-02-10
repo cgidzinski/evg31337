@@ -9,9 +9,9 @@ myApp.controller('InterestController', function($scope) {
 });
 
 myApp.controller('AboutController', function($scope) {
-	$scope.descriptionTitle="Colinious Maximus the first"
+	$scope.descriptionTitle="Colin Gidzinski"
 	$scope.image="http://placehold.it/750x450"
-	$scope.description="Heyo"
+	$scope.description="Heyo, I'm Colin Gidzinski! Im currently in my 3rd year of Univeristy at Wilfrid Laurier University."
   $scope.friends = [
   				   {"name":"DenoSaauur", "company":"Lyninx inc." ,"description":"Herp Derp.","website":"http://www.google.ca","image":"http://placehold.it/750x450"},
                    {"name":"Tobeans","company":"BadApps inc.", "description":"Hey Baus","website":"http://www.google.ca","image":"http://placehold.it/750x450"},
