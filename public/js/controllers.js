@@ -32,26 +32,83 @@ myApp.controller('SoftwareController', function($scope) {
 	$scope.title="Software"
 		$scope.titleSubtext="Heyo bugs"
   $scope.projects = [
-  				   {"name":"some program", "date":"May 24, 2013" ,"description":"sdfsdfsdfsdf","id":"0","image":"http://placehold.it/600x300"},
+  				         {"name":"some program", "date":"May 24, 2013" ,"description":"sdfsdfsdfsdf","id":"0","image":"http://placehold.it/600x300"},
                    {"name":"calculation software","date":"May 24, 2013", "description":"ergsergserger","id":"2","image":"http://placehold.it/600x300"}
                    ];
 });
 
 myApp.controller('Project_Item', function($scope, $stateParams) {
 //Get variables from previous page routed parameters
-    var category = $stateParams.id;
+    var id = $stateParams.id;
 
+if (id==0){
 
-	$scope.title="Project Name"
-	$scope.date="August 24, 2013 at 9:00 PM "
-	$scope.titleSubtext="It Beeps"
-	$scope.image="http://placehold.it/900x300"
-	$scope.quickDescription="Some quick Desc"
-	$scope.mainText="Dis how i built"
+  $scope.title="Project Name 0"
+  $scope.date="August 24, 2013 at 9:00 PM "
+  $scope.titleSubtext="It Beeps"
+  $scope.image="http://placehold.it/900x300"
+  $scope.quickDescription="Some quick Desc"
+  $scope.mainText="Dis how i built"
  
  $scope.links = [
-  			        {"text":"some url","url":"http://placehold.it/600x300"},
+                {"text":"some url","url":"http://placehold.it/600x300"},
                     {"text":"some other url","url":"http://placehold.it/600x300"},
-					{"text":"once again","url":"http://placehold.it/600x300"}
+          {"text":"once again","url":"http://placehold.it/600x300"}
                   ];
+
+}
+else if (id==1){
+
+ $scope.title="Project Name 1"
+  $scope.date="August 24, 2013 at 9:00 PM "
+  $scope.titleSubtext="It Beeps"
+  $scope.image="http://placehold.it/900x300"
+  $scope.quickDescription="Some quick Desc"
+  $scope.mainText="Dis how i built"
+ 
+ $scope.links = [
+                {"text":"some url","url":"http://placehold.it/600x300"},
+                    {"text":"some other url","url":"http://placehold.it/600x300"},
+          {"text":"once again","url":"http://placehold.it/600x300"}
+                  ];
+
+}
+else if (id==2){
+
+ $scope.title="Project Name 2"
+  $scope.date="August 24, 2013 at 9:00 PM "
+  $scope.titleSubtext="It Beeps"
+  $scope.image="http://placehold.it/900x300"
+  $scope.quickDescription="Some quick Desc"
+  $scope.mainText="Dis how i built"
+ 
+ $scope.links = [
+                {"text":"some url","url":"http://placehold.it/600x300"},
+                    {"text":"some other url","url":"http://placehold.it/600x300"},
+          {"text":"once again","url":"http://placehold.it/600x300"}
+                  ];
+
+}
+else if (id==3){
+
+ $scope.title="Project Name 3"
+  $scope.date="August 24, 2013 at 9:00 PM "
+  $scope.titleSubtext="It Beeps"
+  $scope.image="http://placehold.it/900x300"
+  $scope.quickDescription="Some quick Desc"
+  $scope.mainText="Dis how i built"
+ 
+ $scope.links = [
+                {"text":"some url","url":"http://placehold.it/600x300"},
+                    {"text":"some other url","url":"http://placehold.it/600x300"},
+          {"text":"once again","url":"http://placehold.it/600x300"}
+                  ];
+
+}
+
+
+
+
+
+
 });
