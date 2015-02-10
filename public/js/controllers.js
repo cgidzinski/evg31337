@@ -1,11 +1,11 @@
 myApp.controller('InterestController', function($scope) {
   $scope.titleSubtext="Supposibly I enjoy this trash..."
   $scope.interests = [
-  				   {"name":"Electronics", "description":"I like to build and take apart stuff."},
-                   {"name":"Programming", "description":"I enjoy the programming"},
-                   {"name":"Warhammer", "description":"FOR THE EMPEROR"},
-                   {"name":"Magic", "description":"swamp 4 lyfe"},
-                   {"name":"Airsoft", "description":"pew pew milsim"}];
+  				   {"name":"Electronics", "description":"I LOVE to take things apart and build stuff. Self taught from an early age and always wanting to learn more. Robots to Alarm systems to Spy gadgets."},
+                   {"name":"Programming", "description":"Theres always somthing that can be improved in applications these days. This is why in my free time you can find me building interesting applications for Mobile,Web and Desktop."},
+                   {"name":"Warhammer", "description":"FOR THE EMPEROR! Few things get you thinking like commanding an army. The races I play are the Necrons in Warhammer40K and the Skaven in Warhammer Fantasy."},
+                   {"name":"Magic", "description":"Its all about the Swamps. Avid player of magic with allegience only to the powerfull life draining spells of Mono Black Decks."},
+                   {"name":"Airsoft", "description":"Nothing says exercise and team-building like carrying 40lbs of gear and running for hours on end. All this while being flanked or shot at by the opposing team or even mother nature."}];
 });
 
 myApp.controller('AboutController', function($scope) {
