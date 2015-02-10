@@ -4,91 +4,39 @@ var allowCrossDomain = function(req, res, next) {
   next();
 }
 
-
 var express = require('express');
 var path = require('path');
+var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var bcrypt = require('bcryptjs');
 var app = express();
-  app.use(allowCrossDomain);
 
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/EVG31337', function(err) {
+    if(err) {
+        console.log('connection error', err);
+    } else {
+        console.log('connection successful');
+    }
+});
+
+
+// uncomment after placing your favicon in /public
+//app.use(favicon(__dirname + '/public/favicon.ico'));
 app.set('port', process.env.PORT || 3000);
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(allowCrossDomain);
+module.exports = app;
 
-
-var projectSchema = new mongoose.Schema({
-  _id: Number,
-  title: String,
-  date: Date,
-  titleSubtext: String,
-  image: String,
-  quickDescription: String,
-  mainText: String,
-  poster: String,
-  links: [{
-      text: String,
-      url: String
-  }]
-});
-var softwareSchema = new mongoose.Schema({
-  _id: Number,
-  name: String,
-  date: Date,
-  description: String,
-  image: String,
-});
-
-var hardwareSchema = new mongoose.Schema({
-  _id: Number,
-  name: String,
-  date: Date,
-  description: String,
-  image: String,
-});
-
-
-var interestSchema = new mongoose.Schema({
-  _id: Number,
-  titleSubtext: String,
-   interests: [{
-      name: String,
-      description: String
-  }]
-});
-
-var aboutSchema = new mongoose.Schema({
-  _id: Number,
-  descriptionTitle: String,
-  image: String,
-  description: String,
-   friends: [{
-      name: String,
-      company: String,
-      description: String,
-      website: String,
-      image: String
-  }]
-});
-
-var Project = mongoose.model('Project', projectSchema);
-var Software = mongoose.model('Software', softwareSchema);
-var Hardware = mongoose.model('Hardware', hardwareSchema);
-
-var Interest = mongoose.model('Interest', interestSchema);
-var About = mongoose.model('About', aboutSchema);
-
-//mongoose.connect('localhost');
-
-
-
-
+//Api
+var API = require('./routes/API_Calls');
+app.use('/API', API);
 
 app.set('views', __dirname + '/');
 app.set('files', __dirname + '/');
