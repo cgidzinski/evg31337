@@ -23,37 +23,38 @@
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2>Look at all the nothing that i have here (Guarenteed 404's)</h2>
+                <h2>Some Links of Use</h2>
                 <hr>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <a ui-sref="404">
-                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
+                <a href="https://github.com/evg31337">
+                    <img class="img-responsive img-home-portfolio" style="width:360px;height:231px;" src="images/github.jpg">
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <a href="http://www.games-workshop.com/en-CA/">
+                    <img class="img-responsive img-home-portfolio" style="width:360px;height:231px;" src="images/necron.jpg">
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <a ui-sref="404">
-                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
+                <a href="http://deskthority.net/wiki/Cherry_MX_Blue">
+                    <img class="img-responsive img-home-portfolio" style="width:360px;height:231px;" src="images/cherryb.jpg">
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <a ui-sref="404">
-                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
+               <a href="http://magic.wizards.com/">
+                    <img class="img-responsive img-home-portfolio" style="width:360px;height:231px;" src="images/mtg.jpg">
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <a ui-sref="404">
-                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
+                <a href="http://www.raspberrypi.org/">
+                    <img class="img-responsive img-home-portfolio" style="width:360px;height:231px;" src="images/raspi.jpg">
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <a ui-sref="404">
-                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a ui-sref="404">
-                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
+                <a href="#">
+                    <img class="img-responsive img-home-portfolio" style="width:360px;height:231px;" src="images/phones.jpg">
                 </a>
             </div>
         </div>
@@ -64,54 +65,41 @@
 
 </div>
 <!-- /.section -->
-
 <div class="section-colored">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6">
-                <h2>Some new project:</h2>
-                <ul>
-                    <li>DASrk</li>
-                    <li>Basdfas</li>
-                    <li>Moasdfsdgn</li>
-                    <li>dfgsdgfsd</li>
-                    <li>weaffwaf</li>
-                    <li>agsdfasdf</li>
-                    <li>erte</li>
-                    <li>dfgdfgdgdfg</li>
-                    <li>dsgdfgsdfgdf</li>
-                    <li>wetrwertertw</li>
-                </ul>
+                <a ui-sref="project({id:lastItem._id})"><img class="img-responsive"src="{{lastItem.image}}" style="width:360px;height:231px;"></a>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
-                <img class="img-responsive" src="http://placehold.it/700x450/ffffff/cccccc">
+                <h2>{{lastItem.title}}</h2>
+                      
+<div class="col-md-6">
+            {{lastItem.date}}
+            <br><br><p>{{lastItem.titleSubtext}}</p>
+            <a class="btn btn-primary" ui-sref="project({id:lastItem._id})">Read More <i class="fa fa-angle-right"></i></a>
+        </div>
             </div>
         </div>
         <!-- /.row -->
     </div>
     <!-- /.container -->
 </div>
-<!-- /.section-colored -->
 
 <div class="section">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6">
-                <img class="img-responsive" src="http://placehold.it/700x450">
+                <a ui-sref="project({id:lastlastItem._id})"><img class="img-responsive"src="{{lastlastItem.image}}" style="width:360px;height:231px;"></a>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
-                <h2>Some other new project:</h2>
-                <ul>
-                    <li>Basdfas</li>
-                    <li>Moasdfsdgn</li>
-                    <li>dfgsdgfsd</li>
-                    <li>weaffwaf</li>
-                    <li>agsdfasdf</li>
-                    <li>erte</li>
-                    <li>dfgdfgdgdfg</li>
-                    <li>dsgdfgsdfgdf</li>
-                    <li>wetrwertertw</li>
-                </ul>
+                <h2>{{lastlastItem.title}}</h2>
+                    <div class="col-md-6">
+            {{lastlastItem.date}}
+            <br><br><p>{{lastlastItem.titleSubtext}}</p>
+            <a class="btn btn-primary" ui-sref="project({id:lastlastItem._id})">Read More <i class="fa fa-angle-right"></i></a>
+        </div>
+
             </div>
         </div>
         <!-- /.row -->

@@ -35,8 +35,8 @@ app.use(allowCrossDomain);
 module.exports = app;
 
 //Api
-var API = require('./routes/API_Calls');
-app.use('/API', API);
+var Project = require('./routes/Project_Calls');
+app.use('/API_PRJ', Project);
 
 app.set('views', __dirname + '/');
 app.set('files', __dirname + '/');

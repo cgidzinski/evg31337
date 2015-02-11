@@ -14,8 +14,10 @@
 
             <!-- the actual blog post: title/author/date/content -->
            
-            <p><i class="fa fa-clock-o"></i> {{date}} by <a ui-sref="about">Colin Gidzinski</a>
-            </p>
+            <p>
+            By <a ui-sref="about">Colin Gidzinski</a></p>
+            {{date}} 
+            
             <hr>
             <img src="{{image}}" class="img-responsive">
             <hr>
@@ -23,11 +25,11 @@
 
             <p>{{mainText}}</p>
 
-            <p><strong>Links:</strong>
+           <!--  <p><strong>Links:</strong>
             </p>
             <ul ng-repeat="item in links">
                 <li><a href="{{item.url}}">{{item.text}}</a></li>
-            </ul>
+            </ul> -->
             <hr>
         </div>
     </div>

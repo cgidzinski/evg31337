@@ -11,7 +11,8 @@ myApp.config(function($stateProvider, $urlRouterProvider, $locationProvider, $ur
     $stateProvider
         .state('home', {
             url: "/",
-            templateUrl: "/views/home.html"
+            templateUrl: "/views/home.html",
+            controller: "HomeController"
         })
         .state('hardware', {
             url: "/hardware",
