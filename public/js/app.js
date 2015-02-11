@@ -38,8 +38,7 @@ myApp.config(function($stateProvider, $urlRouterProvider, $locationProvider, $ur
         })
         .state('about', {
             url: "/about",
-            templateUrl: "views/about.html",
-            controller: "AboutController"
+            templateUrl: "views/about.html"
         })
         .state('contact', {
             url: "/contact",
