@@ -39,7 +39,6 @@ var Project = require('./routes/Project_Calls');
 app.use('/API_PRJ', Project);
 
 app.set('views', __dirname + '/');
-app.set('files', __dirname + '/');
 app.use(express.static(__dirname + "/public"));
 app.use('/*', function(req, res){
   res.sendFile(__dirname + '/public/index.html');
